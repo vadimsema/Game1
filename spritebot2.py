@@ -5,13 +5,13 @@ from spriteBulletbot import Bulletsbot
 
 
 class bot2(pg.sprite.Sprite):
-    def __init__(self,x,filename,group,hp):
+    def __init__(self,x,filename,group,hp,speed):
         pg.sprite.Sprite.__init__(self)
         self.x  = x
         self.image = pg.image.load(filename).convert_alpha()
         self.rect=self.image.get_rect(center=(x,0))
-        self.speed = 10
-        self.speedrun = 10
+        self.speed = speed
+        self.speedrun = 8
         self.add(group)
         self.counter = 0
         self.counter1 = 0
